@@ -1,0 +1,227 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face{
+    font-family: "android";
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+
+}
+/* cores utilizadas
+#c5ebd6
+#83elad
+#3ddc84
+#2fa866
+#1a5c37
+#063d1e
+*/
+
+:root{ 
+    /* fazendo variaveis */
+    /* facilita as coisas */
+    /* pra fazer uma variavel é --nome: valor */
+
+    /* variavel para cores */
+    --cor0: #ebe5c5;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    /* variavel para fontes */
+    --fonte_padrao: Arial, Helvetica, sans-serif;
+    --fonte_destaque: "Bebas Neue", sans-serif;
+    --fonte_andorid: "android", cursive;
+
+
+
+}
+
+*{ /* configuraçao global */
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+body{
+    background-color: var(--cor0);  /* usar variaveis */
+    font-family: var(--fonte_padrao); /* fonte */
+}
+ 
+a.external::after{  /* todo o link da classe externo; ele vai colar depois dele */
+    content: "\1F517\00A0";  /* o emoji */
+}
+
+header{
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5)); /* degrade linear */
+    min-height: 150px;  /* minmimo de altura */
+    text-align: center; /* texto centralizado */
+    padding-top: 40px; /* mais 40px no padding em cima*/
+    font-weight: normal;
+
+}
+header > h1{ /* h1 que esta no header */
+     color: white;
+     font-family: var(--fonte_destaque);
+     margin-bottom: 20px; /* mais 20px na margin em baixo*/
+     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267); /* sombra no texto */
+}
+header > p{
+    font-family: var(--fonte_padrao);
+    color: white;
+    max-width: 500px;
+    margin: auto;
+    font-size: 1.2em;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.356); /* sombra no texto */
+}
+
+
+
+nav{
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.479); /* sombra na caixa */
+}
+
+nav > a{
+    color:var(--cor1);
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.5s; /* transiçao de cor */
+    
+}
+
+nav > a:hover{
+    background-color: var(--cor3);
+    color: var(--cor5);
+}
+
+
+main{
+    background-color: white;
+    /* responsividade */
+    min-width: 320px;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.514);
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+main h1{
+    color: var(--cor5);
+    font-family: var(--fonte_andorid);
+    font-weight: normal;
+    font-size: 1.8em;
+}
+
+main h2{
+    font-family: var(--fonte_andorid);
+    color: var(--cor4);
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, var(--cor1), transparent); /*  degrade com transparencia*/
+    text-indent: 8px; 
+    font-weight: normal;
+
+}
+
+main img{
+    width: 100%; /* largura maxima*/
+}
+
+main img.pequena{
+    max-width: 350px; /* maximo de largura */
+    display: block;  /* ocupa toda a largura da linha e quebra a antes e a depois*/
+    margin: auto; /* margin centralizada */
+}
+
+main p{
+    margin: 15px 0px ; 
+    text-align: justify; /* texto justificado*/
+    text-indent: 30px; /* Paragrafo */
+    font-size: 1em; /* tamanho da fonte */
+    line-height: 2em; /* altura entre linhas*/
+}
+
+main strong{
+    color: var(--cor4); /* cor do texto  */
+    font-weight: bold;
+    padding: 2px 6px;
+}
+
+main a{
+    text-decoration: none; /* sem decoraçao de texto */
+    font-weight: bold; /* peso do texto */
+    color: var(--cor5); /* cor do texto  */
+    background-color: var(--cor1); /* cor de fundo  */
+    padding: 2px 6px;
+
+}
+
+div.video{
+    background-color: var(--cor5);
+    margin-bottom: 30px;
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 56.5%;
+    position: relative;
+}
+
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+main a:hover{
+    text-decoration: underline; /* decoraçao com uma linha por baixo  */
+    color: var(--cor4); /* cor do texto  */
+}
+aside{
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.274);
+}
+
+aside > h3{
+    background-color: var(--cor4);
+    color: white;
+    padding: 5px;
+    margin: -10px -10px 0px -10px; /* -10 pixeis pra fora */
+    border-radius: 10px 10px 0px 0px; /* esquerda , direita,  baixo,  cima*/
+}
+aside > ul{
+    list-style-type: "\1F5F8\00A0\00A0";   /* para por emojis; nota: \00A0 é pra da um espaço*/
+    list-style-position: inside; /* estilo da lista dentro do aside (as bolinhas vem outside) */
+    columns: 2;  /* dividir em duas colunas */
+}
+
+
+footer{
+    background-color: var(--cor5); /* cor de fundo  */
+    color: white; /* cor do texto  */
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+footer > p > a{
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer > a:hover{
+    text-decoration: underline;
+    color: var(--cor1);
+}
+
